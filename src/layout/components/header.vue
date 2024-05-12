@@ -31,7 +31,7 @@ const NAVIGATION = [
   { key: 'News', title: '动态', label: '动态', icon: () => h(MailOutlined), router: { name: 'News' } },
   { key: 'People', title: '成员', label: '成员', icon: () => h(MailOutlined), router: { name: 'People' } },
   { key: 'Projects', title: '项目', label: '项目', icon: () => h(MailOutlined), router: { name: 'Projects' } },
-  { key: 'Publications', title: '发表', label: '发表', icon: () => h(MailOutlined), router: { name: ' Publications' } },
+  { key: 'Publications', title: '学术报告', label: '发表', icon: () => h(MailOutlined), router: { name: ' Publications' } },
   { key: 'Demo', title: '原型系统', label: '原型系统', icon: () => h(MailOutlined), router: { name: 'Demo' } },
 ]
 </script>
