@@ -4,7 +4,7 @@
       <a-carousel>
         <div class="banner-item">
           <div class="title">
-            <h3>发表</h3>
+            <h3>学术报告</h3>
             <div class="desc">介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字</div>
           </div>
         </div>
