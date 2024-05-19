@@ -1,3 +1,7 @@
+export const pageBanner = {
+  title: "成员",
+  desc: '简单介绍'
+}
 export const stuffList = [
   {
     name: "xxx 教授",

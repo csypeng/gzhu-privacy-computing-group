@@ -4,8 +4,8 @@
     <a-carousel>
       <div class="banner-item">
         <div class="title">
-          <h3>动态</h3>
-          <div class="desc">介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字</div>
+          <h3>{{pageBanner.title}}</h3>
+          <div class="desc">{{pageBanner.desc}}</div>
         </div>
       </div>
     </a-carousel>
@@ -41,7 +41,7 @@
 </div>
 </template>
 <script setup>
-import { stuffList } from './data.js'
+import { stuffList, pageBanner } from './data.js'
 import { MailOutlined } from '@ant-design/icons-vue'
 </script>
 <script>
