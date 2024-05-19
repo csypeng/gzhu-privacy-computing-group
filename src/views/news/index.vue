@@ -4,64 +4,36 @@
     <a-carousel>
       <div class="banner-item">
         <div class="title">
-          <h3>动态</h3>
-          <div class="desc">介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字</div>
+          <h3>{{pageBanner.title}}</h3>
+          <div class="desc">{{pageBanner.desc}}</div>
         </div>
       </div>
     </a-carousel>
   </div>
   <div class="news-detail">
-    <a-row :gutter="16" v-for="index in 5" :key="index" style="margin-bottom: 16px;">
-      <a-col :span="8">
-        <a-card hoverable class="news-card">
-          <template #cover>
-            <img
-              alt="example"
-              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-            />
-          </template>
-          <template #actions>
-            <span>查看</span>
-          </template>
-          <a-card-meta title="Card title" description="This is the description">
-          </a-card-meta>
-        </a-card>
-      </a-col>
-      <a-col :span="8">
-        <a-card hoverable class="news-card">
-          <template #cover>
-            <img
-              alt="example"
-              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-            />
-          </template>
-          <template #actions>
-            <span>查看</span>
-          </template>
-          <a-card-meta title="Card title" description="This is the description">
-          </a-card-meta>
-        </a-card>
-      </a-col>
-      <a-col :span="8">
-        <a-card hoverable class="news-card">
-          <template #cover>
-            <img
-              alt="example"
-              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-            />
-          </template>
-          <template #actions>
-            <span>查看</span>
-          </template>
-          <a-card-meta title="Card title" description="This is the description">
-          </a-card-meta>
-        </a-card>
-      </a-col>
-    </a-row>
-
+    <div class="news-item" v-for="news in newsList">
+      <div class="time">{{news.time}}</div>
+      <div class="wrapper">
+        <div class="title">{{news.title}}</div>
+        <div class="content" v-if="news.content">
+          <markdown-renderer :source="news.content" />
+        </div>
+        <div class="tag-row">
+          <a-tag v-for="tag in news.tags" :color="tag.type">
+            <a v-if="tag.name==='PDF'" :href="tag.url" download>{{tag.name}}</a>
+            <a v-else-if="tag.url" :href="tag.url">{{tag.name}}</a>
+            <span v-else>{{tag.name}}</span>
+          </a-tag>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 </template>
+<script setup>
+import { pageBanner, newsList } from './data.js'
+import MarkdownRenderer from '@/components/MarkdownRenderer.vue'
+</script>
 <script>
 export default {
   name: "News"
@@ -109,6 +81,30 @@ export default {
         background: #f5f5f5;
       }
     }
+  }
+  .news-item {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    .time {
+      width: 120px;
+    }
+    .wrapper {
+      flex: 1;
+      margin-left: 10px;
+      .title {
+        font-weight: 600;
+      }
+      .content {
+        margin-top: 10px;
+      }
+      .tag-row {
+        margin-top: 10px;
+      }
+    }
+  }
+  .news-item + .news-item {
+    margin-top: 20px;
   }
 }
 </style>

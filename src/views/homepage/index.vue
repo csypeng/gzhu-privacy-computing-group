@@ -1,33 +1,20 @@
 <template>
 <div class="homepage">
   <div class="banner">
-    <a-carousel autoplay>
+    <a-carousel :autoplay="pageBanner.autoPlay">
       <div class="banner-item">
-        <div class="title">
-          <h3>介绍1</h3>
-          <div class="desc">介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字</div>
-        </div>
-      </div>
-      <div class="banner-item">
-        <div class="title">
-          <h3>介绍2</h3>
-          <div class="desc">介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字</div>
-        </div>
-      </div>
-      <div class="banner-item">
-        <div class="title">
-          <h3>介绍3</h3>
-          <div class="desc">介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字</div>
+        <div class="title" v-for="(banner, index) in pageBanner.data" :key="index">
+          <h3>{{ banner.title }}</h3>
+          <div class="desc" v-if="banner.desc">{{ banner.desc }}</div>
         </div>
       </div>
     </a-carousel>
   </div>
   <div class="content">
     <div class="introduction">
-      <div class="title">隐私计算项目组</div>
+      <div class="title">{{groupIntroduction.title}}</div>
       <div class="desc">
-        <p>介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字</p>
-        <p>介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字</p>
+        <markdown-renderer :source="groupIntroduction.content" />
       </div>
     </div>
     <div class="news">
@@ -35,56 +22,21 @@
         <span>最近动态</span>
       </div>
       <div class="card-container">
-        <a-row :gutter="16">
-          <a-col :span="8">
-            <a-card hoverable class="news-card">
-              <template #cover>
-                <img
-                  alt="example"
-                  src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                />
-              </template>
-              <template #actions>
-                <span>查看</span>
-              </template>
-              <a-card-meta title="Card title" description="This is the description">
-              </a-card-meta>
-            </a-card>
-          </a-col>
-          <a-col :span="8">
-            <a-card hoverable class="news-card">
-              <template #cover>
-                <img
-                  alt="example"
-                  src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                />
-              </template>
-              <template #actions>
-                <span>查看</span>
-              </template>
-              <a-card-meta title="Card title" description="This is the description">
-              </a-card-meta>
-            </a-card>
-          </a-col>
-          <a-col :span="8">
-            <a-card hoverable class="news-card">
-              <template #cover>
-                <img
-                  alt="example"
-                  src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                />
-              </template>
-              <template #actions>
-                <span>查看</span>
-              </template>
-              <a-card-meta title="Card title" description="This is the description">
-              </a-card-meta>
-            </a-card>
-          </a-col>
-        </a-row>
+        <a-timeline mode="alternate">
+          <a-timeline-item
+            v-for="(news, index) in newsList.slice(0, 5)" :key="index"
+          > 
+            {{news.time}} <br/>
+            {{news.title}} <br/>
+          </a-timeline-item>
+        
+        </a-timeline>
+        
       </div>
       <div class="btn-row">
-        <a-button type="primary" ghost="">了解更多</a-button>
+        <a-button type="primary" ghost="">
+          <router-link :to="{name: 'News'}">了解更多</router-link>
+        </a-button>
       </div>
     </div>
     <div class="spotlight">
@@ -93,55 +45,14 @@
       </div>
       <div class="card-container">
         <a-row :gutter="16">
-          <a-col :span="6">
+          <a-col :span="6" v-for="(item, index) in researchSpotlight" :key="index">
             <div class="spotlight-card">
               <div class="card-title">
                 <DeploymentUnitOutlined />
-                <span>Spotlight 1</span>
+                <span>{{item.title}}</span>
               </div>
               <ul>
-                <li>desc 1 desc 1 desc 1 desc 1</li>
-                <li>desc 2 desc 2 desc 2 desc 2</li>
-                <li>desc 3 desc 3 desc 3 desc 3</li>
-              </ul>
-            </div>
-          </a-col>
-          <a-col :span="6">
-            <div class="spotlight-card">
-              <div class="card-title">
-                <DeploymentUnitOutlined />
-                <span>Spotlight 2</span>
-              </div>
-              <ul>
-                <li>desc 1 desc 1 desc 1 desc 1</li>
-                <li>desc 2 desc 2 desc 2 desc 2</li>
-                <li>desc 3 desc 3 desc 3 desc 3</li>
-              </ul>
-            </div>
-          </a-col>
-          <a-col :span="6">
-            <div class="spotlight-card">
-              <div class="card-title">
-                <DeploymentUnitOutlined />
-                <span>Spotlight 3</span>
-              </div>
-              <ul>
-                <li>desc 1 desc 1 desc 1 desc 1</li>
-                <li>desc 2 desc 2 desc 2 desc 2</li>
-                <li>desc 3 desc 3 desc 3 desc 3</li>
-              </ul>
-            </div>
-          </a-col>
-          <a-col :span="6">
-            <div class="spotlight-card">
-              <div class="card-title">
-                <DeploymentUnitOutlined />
-                <span>Spotlight 4</span>
-              </div>
-              <ul>
-                <li>desc 1 desc 1 desc 1 desc 1</li>
-                <li>desc 2 desc 2 desc 2 desc 2</li>
-                <li>desc 3 desc 3 desc 3 desc 3</li>
+                <li v-for="(desc, index) in item.content">{{desc}}</li>
               </ul>
             </div>
           </a-col>
@@ -159,6 +70,9 @@
 
 <script setup>
 import { CloudOutlined, DeploymentUnitOutlined } from '@ant-design/icons-vue'
+import { pageBanner, groupIntroduction, researchSpotlight } from './data.js'
+import { newsList } from '@/views/news/data.js'
+import MarkdownRenderer from '@/components/MarkdownRenderer.vue'
 </script>
 <script>
 export default {

@@ -1,31 +1,46 @@
 <template>
-  <div class="project-pages">
+  <div class="publication-pages">
     <div class="banner">
       <a-carousel>
         <div class="banner-item">
           <div class="title">
-            <h3>学术报告</h3>
-            <div class="desc">介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字</div>
+            <h3>{{pageBanner.title}}</h3>
+            <div class="desc">{{pageBanner.desc}}</div>
           </div>
         </div>
       </a-carousel>
     </div>
-    <div class="project-detail">
+    <div class="publication-detail">
       <div class="menu-bar">
         <a-menu v-model:selectedKeys="currentYear" mode="horizontal" :items="years" />
       </div>
-      <a-list item-layout="vertical" size="large" :pagination="pagination" :data-source="listData">
-        <template #renderItem="{ item }">
-          <a-list-item key="item.title">
-            <a-list-item-meta :description="item.description">
-              <template #title>
-                <a :href="item.href">{{ item.title }}</a>
-              </template>
-            </a-list-item-meta>
-            {{ item.content }}
-          </a-list-item>
-        </template>
-      </a-list>
+
+      <div class="publication-list">
+        <a-table
+          :dataSource="publications"
+          :columns="columns"
+          :showHeader="false"
+          row-class-name="publication-row"
+        >
+          <template #bodyCell="{ column, record }">
+            <template v-if="column.key === 'category'">
+              <a-tag :color="CATEGORY[record.category]">{{record.category}}</a-tag>
+            </template>
+            <template v-else-if="column.key === 'content'">
+              <div class="title">{{record.title}}</div>
+              <div class="writer">{{record.writer}}</div>
+              <em class="subtitle">{{record.subtitle}}</em>
+              <div class="tags" v-if="record.tags && record.tags.length">
+                <a-tag v-for="tag in record.tags" :color="tag.type">
+                  <a v-if="tag.name==='PDF'" :href="tag.url" download>{{tag.name}}</a>
+                  <a v-else-if="tag.url" :href="tag.url" target="_blank">{{tag.name}}</a>
+                  <span v-else>{{tag.name}}</span>
+                </a-tag>
+              </div>
+            </template>
+          </template>
+        </a-table>
+      </div>
     </div>
   </div>
 </template>
@@ -33,18 +48,21 @@
 <script setup>
 import { StarOutlined, LikeOutlined, MessageOutlined, RightOutlined } from '@ant-design/icons-vue'
 import { ref } from 'vue'
-const listData = [];
-for (let i = 0; i < 23; i++) {
-  listData.push({
-    href: '',
-    title: `Publictions title ${i}`,
-    // avatar: 'https://joeschmoe.io/api/v1/random',
-    description:
-      '2024-04-01 13:00  Writter',
-    content:
-      'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
-  });
-}
+import { pageBanner, publications, CATEGORY } from './data.js'
+
+const columns = [
+  {
+    title: '',
+    dataIndex: 'category',
+    key: 'category',
+    width: '120px'
+  },
+  {
+    title: '',
+    key: 'content',
+  }
+]
+
 const pagination = {
   onChange: page => {
     console.log(page);
@@ -52,8 +70,9 @@ const pagination = {
   pageSize: 10,
 };
 
-const years = []
-const currentYear = ref([`year-2024`]);
+const years = [{key: 'all', label: 'All', title: 'All'}]
+const currentYear = ref([`all`]);
+
 for (let i = 0; i < 6; i++) {
   years.push({
     key: `year-${2024-i}`,
@@ -71,7 +90,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.project-pages {
+.publication-pages {
   .banner {
     width: 100%;
     :deep(.banner-item) {
@@ -103,13 +122,37 @@ export default {
       color: #fff;
     }
   }
-  .project-detail {
+  .publication-detail {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 0 40px 0;
     .menu-bar {
       margin-bottom: 20px;
+    }
+  }
+  .publication-list {
+    
+    :deep(.title) {
+      font-size: 18px;
+    }
+    :deep(.subtitle) {
+      font-size: 16px;
+    }
+    :deep(.writer) {
+      font-size: 16px;
+    }
+    :deep(.tags) {
+      margin-top: 10px;
+      margin-bottom: 6px;
+    }
+    :deep(.publication-row) {
+      .ant-table-cell:first-child {
+        vertical-align: top;
+        .ant-tag {
+          margin-top: 6px;
+        }
+      }
     }
   }
 }

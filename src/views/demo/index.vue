@@ -4,30 +4,31 @@
       <a-carousel>
         <div class="banner-item">
           <div class="title">
-            <h3>原型系统</h3>
-            <div class="desc">介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字</div>
+            <h3>{{pageBanner.title}}</h3>
+            <div class="desc">{{pageBanner.desc}}</div>
           </div>
         </div>
       </a-carousel>
     </div>
-    <div class="project-detail">
-      <a-list item-layout="vertical" size="large" :pagination="pagination" :data-source="listData">
-        <template #renderItem="{ item }">
-          <a-list-item key="item.title">
-            <template #extra>
-              <img
-                width="272"
-                alt="logo"
-                src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
-              />
-            </template>
-            <a-list-item-meta :description="item.description">
+    <div class="demo-detail">
+      <a-list item-layout="vertical" size="large" :pagination="pagination" :data-source="demoList">
+        <template #renderItem="{ item, index }">
+          <a-list-item :key="index">
+            <a-list-item-meta :description="item.subtitle">
               <template #title>
-                <a :href="item.href">{{ item.title }}</a>
+                <a :href="item.href" style="font-size: 18px">{{ item.title }}</a>
               </template>
-              <template #avatar><a-avatar :src="item.avatar" /></template>
             </a-list-item-meta>
-            {{ item.content }}
+            <div>
+              <div> {{ item.description }} </div>
+              <div class="tag-row">
+                <a-tag v-for="tag in item.tags" :color="tag.type">
+                  <a v-if="tag.name==='PDF'" :href="tag.url" download>{{tag.name}}</a>
+                  <a v-else-if="tag.url" :href="tag.url" target="_blank">{{tag.name}}</a>
+                  <span v-else>{{tag.name}}</span>
+                </a-tag>
+              </div>
+            </div>
           </a-list-item>
         </template>
       </a-list>
@@ -37,6 +38,7 @@
 
 <script setup>
 import { StarOutlined, LikeOutlined, MessageOutlined, RightOutlined } from '@ant-design/icons-vue';
+import { pageBanner, demoList } from './data.js'
 const listData = [];
 for (let i = 0; i < 23; i++) {
   listData.push({
@@ -111,11 +113,14 @@ export default {
       color: #fff;
     }
   }
-  .project-detail {
+  .demo-detail {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 0;
+    .tag-row {
+      margin-top: 16px;
+    }
   }
 }
   
