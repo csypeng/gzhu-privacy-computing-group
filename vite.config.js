@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 // import eslintPlugin from 'vite-plugin-eslint'
 import path from 'path'
 // import svgLoader from 'vite-svg-loader'
-import mdPlugin from 'vite-plugin-markdown'
+// import mdPlugin from 'vite-plugin-markdown'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -21,9 +21,9 @@ export default defineConfig({
     // eslintPlugin({
     //   include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue']
     // }),
-    mdPlugin()
+
   ],
-  // assetsInclude: ['**/*.md'],
+  assetsInclude: ['**/*.md'],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src/')
