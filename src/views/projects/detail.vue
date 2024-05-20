@@ -1,11 +1,12 @@
 <template>
   <div class="project-detail">
-    <h1 style="margin-bottom: 30px">{{currentProject.title}}</h1>
+    <h1 style="margin-bottom: 20px">{{currentProject.title}}</h1>
+    <h2 class="project-title">项目简介</h2>
     <div class="project-introduction">
       <markdown-renderer :source="md"></markdown-renderer>
     </div>
 
-    <h2 style="margin: 30px 0 20px 0">相关研究成果</h2>
+    <h1 class="project-title">相关研究成果</h1>
     <div class="publication-list">
       <a-table
         :dataSource="relatedPublications"
@@ -94,9 +95,21 @@ export default {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 0 40px 0;
-
+  .project-title {
+    margin-bottom: 0; 
+    padding: 12px; 
+    background: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    border-bottom: 0;
+  }
+}
+.project-introduction {
+  border: 1px solid #e5e5e5;
+  padding: 12px;
+  margin-bottom: 20px;
 }
 .publication-list {
+  border: 1px solid #e5e5e5;
     
   :deep(.title) {
     font-size: 18px;
