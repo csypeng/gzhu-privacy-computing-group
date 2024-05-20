@@ -16,7 +16,7 @@
           <a-list-item :key="index">
             <a-list-item-meta :description="item.subtitle">
               <template #title>
-                <a :href="item.href" style="font-size: 18px">{{ item.title }}</a>
+                <span style="font-size: 18px">{{item.title}}</span>
               </template>
             </a-list-item-meta>
             <div>

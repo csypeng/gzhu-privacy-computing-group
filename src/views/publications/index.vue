@@ -26,6 +26,9 @@
             <template v-if="column.key === 'category'">
               <a-tag :color="CATEGORY[record.category]">{{record.category}}</a-tag>
             </template>
+            <template v-else-if="column.key === 'year'">
+              <div class="year-col">{{record.year}}</div>
+            </template>
             <template v-else-if="column.key === 'content'">
               <div class="title">{{record.title}}</div>
               <div class="writer">{{record.writer}}</div>
@@ -60,6 +63,12 @@ const columns = [
   {
     title: '',
     key: 'content',
+  },
+  {
+    title: '',
+    dataIndex: 'year',
+    key: 'year',
+    width: '120px'
   }
 ]
 
@@ -126,7 +135,7 @@ export default {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0 40px 0;
+    padding: 30px 0 40px 0;
     .menu-bar {
       margin-bottom: 20px;
     }
@@ -147,11 +156,15 @@ export default {
       margin-bottom: 6px;
     }
     :deep(.publication-row) {
-      .ant-table-cell:first-child {
+      .ant-table-cell:first-child, .ant-table-cell:nth-child(3) {
         vertical-align: top;
         .ant-tag {
           margin-top: 6px;
         }
+      }
+      .year-col {
+        padding-top: 4px;
+        font-size: 18px;
       }
     }
   }

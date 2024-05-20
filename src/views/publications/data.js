@@ -41,7 +41,8 @@ export const publications = [
         ...TAGS.html,
         url: 'https://github.com/vuejs'
       }
-    ]
+    ],
+    labels: ['label 1', 'label 2']
   },
   {
     year: '2024',
@@ -58,7 +59,8 @@ export const publications = [
         ...TAGS.html,
         url: 'https://github.com/vuejs'
       }
-    ]
+    ],
+    labels: ['label 1', 'label 2']
   },
   {
     year: '2024',
@@ -75,7 +77,8 @@ export const publications = [
         ...TAGS.html,
         url: ''
       }
-    ]
+    ],
+    labels: ['label 1', 'label 2']
   },
   {
     year: '2024',
@@ -92,7 +95,8 @@ export const publications = [
         ...TAGS.html,
         url: 'https://github.com/vuejs'
       }
-    ]
+    ],
+    labels: ['label 2', 'label 3']
   },
   {
     year: '2024',
@@ -109,7 +113,8 @@ export const publications = [
         ...TAGS.html,
         url: 'https://github.com/vuejs'
       }
-    ]
+    ],
+    labels: ['label 2', 'label 3']
   },
   {
     year: '2024',
@@ -126,7 +131,8 @@ export const publications = [
         ...TAGS.html,
         url: ''
       }
-    ]
+    ],
+    labels: ['label 2', 'label 3']
   },
   {
     year: '2024',
@@ -143,7 +149,8 @@ export const publications = [
         ...TAGS.html,
         url: ''
       }
-    ]
+    ],
+    labels: ['label 3', 'label 4']
   },
   {
     year: '2024',
@@ -160,7 +167,8 @@ export const publications = [
         ...TAGS.html,
         url: ''
       }
-    ]
+    ],
+    labels: ['label 3', 'label 4']
   },
   {
     year: '2024',
@@ -177,6 +185,7 @@ export const publications = [
         ...TAGS.html,
         url: ''
       }
-    ]
+    ],
+    labels: ['label 4']
   }
 ]

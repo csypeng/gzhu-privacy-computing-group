@@ -12,7 +12,7 @@ import MarkdownItSub from "markdown-it-sub";
 import MarkdownItSup from "markdown-it-sup";
 import MarkdownItTasklists from "markdown-it-task-lists";
 import MarkdownItTOC from "markdown-it-toc-done-right";
-import { reactive } from 'vue';
+import { reactive, computed, watch } from 'vue';
 
 const props = defineProps({
   source: { type: String, default: '' }
@@ -31,7 +31,11 @@ const data = reactive({
   source: props.source
 })
 
-console.log(data.source)
+watch(() => props.source, (newVal, oldVal) => {
+  console.log(newVal, oldVal)
+  data.source = newVal
+})
+
 
 
 </script>

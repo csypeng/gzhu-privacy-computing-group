@@ -14,6 +14,13 @@
       <a-list item-layout="vertical" size="large" :pagination="pagination" :data-source="projectList">
         <template #renderItem="{ item, index }">
           <a-list-item :key="index">
+            <template #extra>
+              <a-image
+                :width="272"
+                :height="168"
+                :src="item.imageUrl"
+              />
+            </template>
             <a-list-item-meta :description="item.subtitle">
               <template #title>
                 <router-link :to="{name: 'ProjectDetail', params: { projectName: item.name }}" style="font-size: 18px;">{{item.title}} </router-link>
