@@ -6,8 +6,18 @@ export const stuffList = [
   {
     name: "xxx 教授",
     desc: "Head & Chair Professor",
+    content: "Ohter introduction",
+    email: 'xxx@xxx.edu.hk',
+    url: 'https://changyudong.site',
+    location: 'some location',
+    imageUrl: ''
+  },
+  {
+    name: "xxx 教授",
+    desc: "Head & Chair Professor",
     content: "Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction",
     email: 'xxx@xxx.edu.hk',
+    url: '',
     location: '',
     imageUrl: ''
   },
@@ -16,6 +26,7 @@ export const stuffList = [
     desc: "Head & Chair Professor",
     content: "Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction",
     email: 'xxx@xxx.edu.hk',
+    url: '',
     location: '',
     imageUrl: ''
   },
@@ -24,14 +35,7 @@ export const stuffList = [
     desc: "Head & Chair Professor",
     content: "Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction",
     email: 'xxx@xxx.edu.hk',
-    location: '',
-    imageUrl: ''
-  },
-  {
-    name: "xxx 教授",
-    desc: "Head & Chair Professor",
-    content: "Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction Ohter introduction, other introduction",
-    email: 'xxx@xxx.edu.hk',
+    url: '',
     location: '',
     imageUrl: ''
   },

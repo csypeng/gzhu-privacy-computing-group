@@ -1,7 +1,7 @@
 export const pageBanner = {
   autoPlay: false,
   data: [
-    { title: "隐私计算项目组", desc: "这是一段介绍" }
+    { title: "隐私计算项目组", desc: "广州大学" }
   ]
 } 
 

@@ -1,7 +1,7 @@
 <template>
 <div class="news-page">
   <div class="banner">
-    <a-carousel>
+    <a-carousel class="carousel">
       <div class="banner-item">
         <div class="title">
           <h3>{{pageBanner.title}}</h3>
@@ -41,14 +41,21 @@ export default {
 </script>
 <style lang="less" scoped>
 .news-page {
+  .carousel {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   .banner {
     width: 100%;
+    background: #000616;
     :deep(.banner-item) {
       text-align: left;
       display: flex !important;
       align-items: center;
       justify-content: center;
       height: 240px;
+      background-image: url('@/assets/images/banner1.jpeg');
+      background-size: cover;
       .title {
         max-width: 1200px;
         width: 100%;

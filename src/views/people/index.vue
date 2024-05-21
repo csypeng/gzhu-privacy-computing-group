@@ -1,7 +1,7 @@
 <template>
 <div class="news-page">
   <div class="banner">
-    <a-carousel>
+    <a-carousel class="carousel">
       <div class="banner-item">
         <div class="title">
           <h3>{{pageBanner.title}}</h3>
@@ -14,16 +14,33 @@
     <a-row :gutter="16" v-for="index in 3" :key="index" style="margin-bottom: 16px;">
       <a-col :span="6" v-for="(stuff, index) in stuffList" :key="index">
         <a-card hoverable class="news-card">
+        <template #cover>
+          <img
+            alt="example"
+            src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+          />
+        </template>
           <a-card-meta>
             <template #title>{{stuff.name}}</template>
             <template #description>
-              <div style="color: rgba(0, 0, 0, 0.88)">{{stuff.desc}}</div>
-              <div>{{stuff.content}}</div>
-              <div style="margin-top: 16px; color: #1677ff">
-                <MailOutlined />
-                {{stuff.email}}
+              <div class="desc">
+                <div style="color: rgba(0, 0, 0, 0.88)">{{stuff.desc}}</div>
+                <div v-if="stuff.content">{{stuff.content}}</div>
               </div>
-              <div v-if="stuff.location">{{stuff.location}}</div>
+              <div class="footer">
+                <div v-if="stuff.email" style="color: #1677ff">
+                  <MailOutlined style="margin-right: 6px" />
+                  {{stuff.email}}
+                </div>
+                <div v-if="stuff.url" style="16px; color: #1677ff">
+                  <HomeOutlined style="margin-right: 6px" />
+                  <a :href="stuff.url" target="_blank">{{stuff.url}}</a>
+                </div>
+                <div v-if="stuff.location">
+                  <EnvironmentOutlined style="margin-right: 6px" />
+                  {{stuff.location}}
+                </div>
+              </div>
             </template>
           </a-card-meta>
         </a-card>
@@ -35,7 +52,7 @@
 </template>
 <script setup>
 import { stuffList, pageBanner } from './data.js'
-import { MailOutlined } from '@ant-design/icons-vue'
+import { MailOutlined, HomeOutlined, EnvironmentOutlined } from '@ant-design/icons-vue'
 </script>
 <script>
 export default {
@@ -44,14 +61,21 @@ export default {
 </script>
 <style lang="less" scoped>
 .news-page {
+  .carousel {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   .banner {
     width: 100%;
+    background: #000616;
     :deep(.banner-item) {
       text-align: left;
       display: flex !important;
       align-items: center;
       justify-content: center;
       height: 240px;
+      background-image: url('@/assets/images/banner1.jpeg');
+      background-size: cover;
       .title {
         max-width: 1200px;
         width: 100%;
@@ -80,9 +104,23 @@ export default {
     margin: 0 auto;
     padding: 50px 0;
     .news-card {
-      // background: #f5f5f5;
       :deep(.ant-card-actions) {
         background: #f5f5f5;
+      }
+      :deep(.ant-card-body) {
+        padding: 16px 20px;
+      }
+      :deep(.desc) {
+        width: 100%;
+        height: 130px;
+        overflow: hidden;
+        // white-space: nowrap;
+        text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+      }
+      :deep(.footer) {
+        margin-top: 10px;
+        height: 66px;
       }
     }
   }

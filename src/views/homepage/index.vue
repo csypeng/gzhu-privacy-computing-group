@@ -1,7 +1,7 @@
 <template>
 <div class="homepage">
   <div class="banner">
-    <a-carousel :autoplay="pageBanner.autoPlay" class="homepage-carousel">
+    <a-carousel :autoplay="pageBanner.autoPlay" class="carousel">
       <div class="banner-item">
         <div class="title" v-for="(banner, index) in pageBanner.data" :key="index">
           <h3>{{ banner.title }}</h3>
@@ -84,7 +84,7 @@ export default {
 
 <style lang="less" scoped>
 .homepage {
-  .homepage-carousel {
+  .carousel {
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -96,7 +96,7 @@ export default {
       display: flex !important;
       align-items: center;
       justify-content: center;
-      height: 400px;
+      height: 240px;
       background-image: url('@/assets/images/banner1.jpeg');
       background-size: cover;
       .title {
@@ -113,7 +113,7 @@ export default {
     }
     :deep(.slick-slide) {
       text-align: center;
-      height: 400px;
+      height: 240px;
       // line-height: 160px;
       background: #001529;
       overflow: hidden;

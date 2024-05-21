@@ -1,7 +1,7 @@
 // color = { processing, success, error, warning, magenta, red, volcano, orange, gold, lime, green, cyan, blue, geekblue, purple }
 export const pageBanner = {
   title: '动态',
-  desc: '关于动态的介绍文字'
+  desc: ''
 }
 
 const TAGS = {
