@@ -1,7 +1,7 @@
 <template>
 <div class="homepage">
   <div class="banner">
-    <a-carousel :autoplay="pageBanner.autoPlay">
+    <a-carousel :autoplay="pageBanner.autoPlay" class="homepage-carousel">
       <div class="banner-item">
         <div class="title" v-for="(banner, index) in pageBanner.data" :key="index">
           <h3>{{ banner.title }}</h3>
@@ -12,12 +12,14 @@
   </div>
   <div class="content">
     <div class="introduction">
-      <div class="title">{{groupIntroduction.title}}</div>
-      <div class="desc">
-        <markdown-renderer :source="groupIntroduction.content" />
+      <div class="inner">
+        <div class="title">{{groupIntroduction.title}}</div>
+        <div style="font-size: 16px;">
+          <markdown-renderer :source="groupIntroduction.content" />
+        </div>
       </div>
     </div>
-    <div class="news">
+    <div class="news">x
       <div class="title">
         <span>最近动态</span>
       </div>
@@ -48,7 +50,7 @@
           <a-col :span="6" v-for="(item, index) in researchSpotlight" :key="index">
             <div class="spotlight-card">
               <div class="card-title">
-                <DeploymentUnitOutlined />
+                <div class="card-icon"></div>
                 <span>{{item.title}}</span>
               </div>
               <ul>
@@ -82,14 +84,21 @@ export default {
 
 <style lang="less" scoped>
 .homepage {
+  .homepage-carousel {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   .banner {
     width: 100%;
+    background: #000616;
     :deep(.banner-item) {
       text-align: left;
       display: flex !important;
       align-items: center;
       justify-content: center;
-      height: 500px;
+      height: 400px;
+      background-image: url('@/assets/images/banner1.jpeg');
+      background-size: cover;
       .title {
         max-width: 1200px;
         width: 100%;
@@ -104,7 +113,7 @@ export default {
     }
     :deep(.slick-slide) {
       text-align: center;
-      height: 500px;
+      height: 400px;
       // line-height: 160px;
       background: #001529;
       overflow: hidden;
@@ -126,6 +135,10 @@ export default {
       background: #f5f5f5;
       // height: 300px;
       padding: 50px 0;
+      .inner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
       .title, .desc {
         max-width: 1200px;
         margin: 0 auto;
@@ -165,11 +178,29 @@ export default {
         max-width: 1200px;
         margin: 0 auto;
       }
+      .card-container {
+        .ant-row {
+          .ant-col {
+            &:first-child .card-icon {
+              background-image: url('@/assets/images/safty.svg');
+            }
+            &:nth-child(2) .card-icon {
+              background-image: url('@/assets/images/privacy.svg');
+            }
+            &:nth-child(3) .card-icon {
+              background-image: url('@/assets/images/reliable.svg');
+            }
+            &:nth-child(4) .card-icon {
+              background-image: url('@/assets/images/ai.svg');
+            }
+          }
+        }
+      }
       .title {
         margin-bottom: 40px;
       }
       .spotlight-card {
-        height: 220px;
+        height: 280px;
         background: #f4f4f4;
         border-radius: 8px;
         .card-title {
@@ -179,13 +210,25 @@ export default {
           font-size: 24px;
           padding: 20px;
           font-weight: bold;
+          .card-icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            // background-image: url('@/assets/images/safty.svg');
+            background-size: contain;
+            margin-bottom: 30px;
+          }
           .anticon {
             font-size: 40px;
-            margin-bottom: 8px;
+            margin-bottom: 30px;
           }
         }
         ul {
           line-height: 22px;
+          color: rgba(0, 0, 0, 0.45);
+          list-style-type: none;
+          text-align: center;
+          padding: 0;
         }
       }
       .btn-row {
