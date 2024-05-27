@@ -102,15 +102,19 @@ export default {
 .publication-pages {
   .banner {
     width: 100%;
+    padding: 0 20px;
     :deep(.banner-item) {
       text-align: left;
       display: flex !important;
       align-items: center;
       justify-content: center;
       height: 240px;
+      background-image: url('@/assets/images/banner1.jpeg');
+      background-size: cover;
       .title {
         max-width: 1200px;
         width: 100%;
+        padding: 0 20px;
         .desc {
           max-width: 280px;
           color: rgba(255,255,255, 0.5);
@@ -135,7 +139,7 @@ export default {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 30px 0 40px 0;
+    padding: 30px 20px 40px 20px;
     .menu-bar {
       margin-bottom: 20px;
     }

@@ -91,12 +91,15 @@ export default {
 .project-pages {
   .banner {
     width: 100%;
+    padding: 0 20px;
     :deep(.banner-item) {
       text-align: left;
       display: flex !important;
       align-items: center;
       justify-content: center;
       height: 240px;
+      background-image: url('@/assets/images/banner1.jpeg');
+      background-size: cover;
       .title {
         max-width: 1200px;
         width: 100%;

@@ -1,5 +1,5 @@
 <template>
-<div class="news-page">
+<div class="people-page">
   <div class="banner">
     <a-carousel class="carousel">
       <div class="banner-item">
@@ -10,48 +10,48 @@
       </div>
     </a-carousel>
   </div>
-  <div class="news-detail">
-    <a-row :gutter="16" v-for="index in 3" :key="index" style="margin-bottom: 16px;">
-      <a-col :span="6" v-for="(stuff, index) in stuffList" :key="index">
-        <a-card hoverable class="news-card">
-        <template #cover>
-          <img
-            alt="example"
-            src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-          />
-        </template>
+  <div class="people-detail">
+    <template v-for="group in staffGroup">
+      <div class="title">{{group.groupTitle}}</div>
+      <div class="inner-container">
+        <a-card hoverable class="news-card" v-for="staff in group.members">
+          <template #cover>
+            <img
+              alt="example"
+              :src="staff.imageUrl ? `/src/assets/images/${staff.imageUrl}` : '/src/assets/images/empty_avater.png'"
+            />
+          </template>
           <a-card-meta>
-            <template #title>{{stuff.name}}</template>
+            <template #title>{{staff.name}}</template>
             <template #description>
               <div class="desc">
-                <div style="color: rgba(0, 0, 0, 0.88)">{{stuff.desc}}</div>
-                <div v-if="stuff.content">{{stuff.content}}</div>
+                <div style="color: rgba(0, 0, 0, 0.88)">{{staff.desc}}</div>
+                <div v-if="staff.content">{{staff.content}}</div>
               </div>
               <div class="footer">
-                <div v-if="stuff.email" style="color: #1677ff">
+                <div v-if="staff.email" style="color: #1677ff">
                   <MailOutlined style="margin-right: 6px" />
-                  {{stuff.email}}
+                  {{staff.email}}
                 </div>
-                <div v-if="stuff.url" style="16px; color: #1677ff">
+                <div v-if="staff.url" style="16px; color: #1677ff">
                   <HomeOutlined style="margin-right: 6px" />
-                  <a :href="stuff.url" target="_blank">{{stuff.url}}</a>
+                  <a :href="staff.url" target="_blank">{{staff.url}}</a>
                 </div>
-                <div v-if="stuff.location">
+                <div v-if="staff.location">
                   <EnvironmentOutlined style="margin-right: 6px" />
-                  {{stuff.location}}
+                  {{staff.location}}
                 </div>
               </div>
             </template>
           </a-card-meta>
         </a-card>
-      </a-col>
-    </a-row>
-
+      </div>
+    </template>
   </div>
 </div>
 </template>
 <script setup>
-import { stuffList, pageBanner } from './data.js'
+import { staffGroup, pageBanner } from './data.js'
 import { MailOutlined, HomeOutlined, EnvironmentOutlined } from '@ant-design/icons-vue'
 </script>
 <script>
@@ -60,7 +60,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.news-page {
+.people-page {
   .carousel {
     max-width: 1200px;
     margin: 0 auto;
@@ -68,6 +68,7 @@ export default {
   .banner {
     width: 100%;
     background: #000616;
+    padding: 0 20px;
     :deep(.banner-item) {
       text-align: left;
       display: flex !important;
@@ -79,6 +80,7 @@ export default {
       .title {
         max-width: 1200px;
         width: 100%;
+        padding: 0 20px;
         .desc {
           max-width: 280px;
           color: rgba(255,255,255, 0.5);
@@ -99,28 +101,51 @@ export default {
       color: #fff;
     }
   }
-  .news-detail {
+  .people-detail {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 34px 20px 0 20px;
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .inner-container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-bottom: 40px;
+    }
     .news-card {
+      width: 24%;
+      margin-top: 16px;
+      :deep(.ant-card-cover) {
+        width: 100%;
+        height: 170px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
       :deep(.ant-card-actions) {
         background: #f5f5f5;
       }
       :deep(.ant-card-body) {
-        padding: 16px 20px;
+        padding: 12px 16px;
       }
       :deep(.desc) {
         width: 100%;
-        height: 130px;
+        height: 110px;
         overflow: hidden;
         // white-space: nowrap;
         text-overflow: ellipsis;
         -o-text-overflow: ellipsis;
       }
-      :deep(.footer) {
-        margin-top: 10px;
-        height: 66px;
+      // :deep(.footer) {
+      //   // margin-top: 10px;
+      //   height: 66px;
+      // }
+      &:not(:nth-child(4n)) {
+        margin-right: calc(4% / 3)
       }
     }
   }

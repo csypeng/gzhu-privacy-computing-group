@@ -56,12 +56,10 @@
               <ul>
                 <li v-for="(desc, index) in item.content">{{desc}}</li>
               </ul>
+              <a-button type="link">了解更多</a-button>
             </div>
           </a-col>
         </a-row>
-      </div>
-      <div class="btn-row">
-        <a-button type="primary" ghost="">了解更多</a-button>
       </div>
 
     </div>
@@ -87,6 +85,7 @@ export default {
   .carousel {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
   }
   .banner {
     width: 100%;
@@ -102,6 +101,7 @@ export default {
       .title {
         max-width: 1200px;
         width: 100%;
+        padding: 0 20px;
         .desc {
           max-width: 280px;
           color: rgba(255,255,255, 0.5);
@@ -138,9 +138,11 @@ export default {
       .inner {
         max-width: 1200px;
         margin: 0 auto;
+        padding: 0 20px;
       }
       .title, .desc {
         max-width: 1200px;
+        padding: 0 20px;
         margin: 0 auto;
       }
       .title {
@@ -151,6 +153,7 @@ export default {
       padding-top: 50px;
       .title, .card-container {
         max-width: 1200px;
+        padding: 0 20px;
         margin: 0 auto;
       }
       .title {
@@ -177,8 +180,14 @@ export default {
       .title, .card-container {
         max-width: 1200px;
         margin: 0 auto;
+        padding: 0 20px;
       }
       .card-container {
+        text-align: center;
+        ul {
+          height: 76px;
+          overflow: hidden;
+        }
         .ant-row {
           .ant-col {
             &:first-child .card-icon {
