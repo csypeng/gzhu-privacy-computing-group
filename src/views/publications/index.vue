@@ -20,11 +20,12 @@
           :dataSource="publications"
           :columns="columns"
           :showHeader="false"
+          :pagination="false"
           row-class-name="publication-row"
         >
           <template #bodyCell="{ column, record }">
-            <template v-if="column.key === 'category'">
-              <a-tag :color="CATEGORY[record.category]">{{record.category}}</a-tag>
+            <template v-if="column.key === 'abbr'">
+              <a-tag :color="CATEGORY[record.abbr]">{{record.abbr}}</a-tag>
             </template>
             <template v-else-if="column.key === 'year'">
               <div class="year-col">{{record.year}}</div>
@@ -56,8 +57,8 @@ import { pageBanner, publications, CATEGORY } from './data.js'
 const columns = [
   {
     title: '',
-    dataIndex: 'category',
-    key: 'category',
+    dataIndex: 'abbr',
+    key: 'abbr',
     width: '120px'
   },
   {
@@ -80,7 +81,7 @@ const pagination = {
 };
 
 const years = [{key: 'all', label: 'All', title: 'All'}]
-const currentYear = ref([`all`]);
+const currentYear = ref(['all']);
 
 for (let i = 0; i < 6; i++) {
   years.push({

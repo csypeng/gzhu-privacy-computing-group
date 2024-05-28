@@ -31,7 +31,7 @@ export const publications = [
     title: 'Secret-Shared Shuffle with Malicious Security',
     writer: 'Xiangfu Song, Dong Yin, Jianli Bai,  Changyu Dong, and Ee-Chien Chang',
     subtitle: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
-    category: 'NDSS',
+    abbr: 'NDSS',
     tags: [
       {
         ...TAGS.pdf,
@@ -49,7 +49,7 @@ export const publications = [
     title: 'Sphinx-in-the-Head: Group Signatures from Symmetric Primitives',
     writer: 'Liqun Chen,  Changyu Dong, Christopher J. P. Newton, and Yalan Wang',
     subtitle: 'ACM Trans. Priv. Secur., 2024',
-    category: 'TOPS',
+    abbr: 'TOPS',
     tags: [
       {
         ...TAGS.pdf,
@@ -67,7 +67,7 @@ export const publications = [
     title: 'Distributed Differential Privacy via Shuffling Versus Aggregation: A Curious Study',
     writer: 'Yu Wei, Jingyu Jia, Yuduo Wu, Changhui Hu,  Changyu Dong, Zheli Liu, Xiaofeng Chen, Yun Peng, and Shaowei Wang',
     subtitle: 'IEEE Trans. Inf. Forensics Secur., 2024',
-    category: 'TIFS',
+    abbr: 'TIFS',
     tags: [
       {
         ...TAGS.pdf,
@@ -85,7 +85,7 @@ export const publications = [
     title: 'Toward Universal Detection of Adversarial Examples via Pseudorandom Classifiers',
     writer: 'Boyu Zhu,  Changyu Dong, Yuan Zhang, Yunlong Mao, and Sheng Zhong',
     subtitle: 'IEEE Trans. Inf. Forensics Secur., 2024',
-    category: 'TIFS',
+    abbr: 'TIFS',
     tags: [
       {
         ...TAGS.pdf,
@@ -103,7 +103,7 @@ export const publications = [
     title: 'Distributed Differential Privacy via Shuffling Versus Aggregation: A Curious Study',
     writer: 'Yu Wei, Jingyu Jia, Yuduo Wu, Changhui Hu,  Changyu Dong, Zheli Liu, Xiaofeng Chen, Yun Peng, and Shaowei Wang',
     subtitle: 'IEEE Trans. Inf. Forensics Secur., 2024',
-    category: 'TIFS',
+    abbr: 'TIFS',
     tags: [
       {
         ...TAGS.pdf,
@@ -121,7 +121,7 @@ export const publications = [
     title: 'Toward Universal Detection of Adversarial Examples via Pseudorandom Classifiers',
     writer: 'Boyu Zhu,  Changyu Dong, Yuan Zhang, Yunlong Mao, and Sheng Zhong',
     subtitle: 'IEEE Trans. Inf. Forensics Secur., 2024',
-    category: 'TIFS',
+    abbr: 'TIFS',
     tags: [
       {
         ...TAGS.pdf,
@@ -139,7 +139,7 @@ export const publications = [
     title: 'Toward Universal Detection of Adversarial Examples via Pseudorandom Classifiers',
     writer: 'Boyu Zhu,  Changyu Dong, Yuan Zhang, Yunlong Mao, and Sheng Zhong',
     subtitle: 'IEEE Trans. Inf. Forensics Secur., 2024',
-    category: 'TIFS',
+    abbr: 'TIFS',
     tags: [
       {
         ...TAGS.pdf,
@@ -157,7 +157,7 @@ export const publications = [
     title: 'Toward Universal Detection of Adversarial Examples via Pseudorandom Classifiers',
     writer: 'Boyu Zhu,  Changyu Dong, Yuan Zhang, Yunlong Mao, and Sheng Zhong',
     subtitle: 'IEEE Trans. Inf. Forensics Secur., 2024',
-    category: 'TIFS',
+    abbr: 'TIFS',
     tags: [
       {
         ...TAGS.pdf,
@@ -175,7 +175,7 @@ export const publications = [
     title: 'Toward Universal Detection of Adversarial Examples via Pseudorandom Classifiers',
     writer: 'Boyu Zhu,  Changyu Dong, Yuan Zhang, Yunlong Mao, and Sheng Zhong',
     subtitle: 'IEEE Trans. Inf. Forensics Secur., 2024',
-    category: 'TIFS',
+    abbr: 'TIFS',
     tags: [
       {
         ...TAGS.pdf,

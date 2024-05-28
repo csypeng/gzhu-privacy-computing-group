@@ -56,7 +56,7 @@
               <ul>
                 <li v-for="(desc, index) in item.content">{{desc}}</li>
               </ul>
-              <a-button type="link">了解更多</a-button>
+              <router-link :to="{name: 'Projects', query: {category: item.category}}">了解更多</router-link>
             </div>
           </a-col>
         </a-row>

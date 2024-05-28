@@ -26,6 +26,7 @@ export const groupIntroduction = {
 export const researchSpotlight = [
   {
     title: '多方安全计算',
+    category: 'secure_computing',
     content: [
       'desc1',
       'desc2',
@@ -34,6 +35,7 @@ export const researchSpotlight = [
   },
   {
     title: '差分隐私',
+    category: 'differential_privacy',
     content: [
       'desc1',
       'desc2',
@@ -42,6 +44,7 @@ export const researchSpotlight = [
   },
   {
     title: '可信执行环境',
+    category: 'reliable',
     content: [
       'desc1',
       'desc2',
@@ -50,6 +53,7 @@ export const researchSpotlight = [
   },
   {
     title: '人工智能安全',
+    category: 'ai_security',
     content: [
       'desc1',
       'desc2',

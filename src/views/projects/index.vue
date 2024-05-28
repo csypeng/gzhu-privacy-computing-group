@@ -11,13 +11,16 @@
       </a-carousel>
     </div>
     <div class="project-detail">
-      <a-list item-layout="vertical" size="large" :pagination="pagination" :data-source="projectList">
+      <div class="menu-bar">
+        <a-menu v-model:selectedKeys="currentCategory" mode="horizontal" :items="category" />
+      </div>
+      <a-list item-layout="vertical" size="large" :pagination="null" :data-source="projectList">
         <template #renderItem="{ item, index }">
           <a-list-item :key="index">
             <template #extra>
               <a-image
-                :width="272"
-                :height="168"
+                :width="250"
+                :height="140"
                 :src="item.imageUrl"
               />
             </template>
@@ -45,7 +48,17 @@
 
 <script setup>
 import { StarOutlined, LikeOutlined, MessageOutlined, RightOutlined } from '@ant-design/icons-vue';
-import { pageBanner, projectList } from './data.js'
+import { pageBanner, projectList, projectCategory } from './data.js'
+import { ref } from 'vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const currentCategory = ref(['all'])
+
+const query = route.query?.category || 'all'
+currentCategory.value = [query]
+console.log(query, currentCategory)
+
 const listData = [];
 for (let i = 0; i < 23; i++) {
   listData.push({
@@ -58,27 +71,18 @@ for (let i = 0; i < 23; i++) {
       'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
   });
 }
-const pagination = {
-  onChange: page => {
-    console.log(page);
-  },
-  pageSize: 10,
-};
-const actions = [
-  {
-    icon: StarOutlined,
-    text: '156',
-  },
-  {
-    icon: LikeOutlined,
-    text: '156',
-  },
-  {
-    icon: MessageOutlined,
-    text: '2',
-  },
-];
 
+const category = [
+  {key: 'all', label: 'All', title: 'All'},
+]
+Object.keys(projectCategory).forEach(elem => {
+  category.push({
+    key: elem,
+    label: projectCategory[elem],
+    title: projectCategory[elem]
+  })
+})
+console.log(category)
 </script>
 
 <script>
@@ -103,6 +107,7 @@ export default {
       .title {
         max-width: 1200px;
         width: 100%;
+        padding: 0 20px;
         .desc {
           max-width: 280px;
           color: rgba(255,255,255, 0.5);
@@ -127,9 +132,12 @@ export default {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 30px 20px 40px 20px;
     .tag-row {
       margin-top: 16px;
+    }
+    .menu-bar {
+      margin-bottom: 20px;
     }
   }
 }

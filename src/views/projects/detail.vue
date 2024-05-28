@@ -16,8 +16,8 @@
         :pagination="false"
       >
         <template #bodyCell="{ column, record }">
-          <template v-if="column.key === 'category'">
-            <a-tag :color="CATEGORY[record.category]">{{record.category}}</a-tag>
+          <template v-if="column.key === 'abbr'">
+            <a-tag :color="CATEGORY[record.abbr]">{{record.abbr}}</a-tag>
           </template>
           <template v-else-if="column.key === 'content'">
             <div class="title">{{record.title}}</div>
@@ -67,8 +67,8 @@ import(`./md/${currentProject.md}.md`).then(res => {
 const columns = [
   {
     title: '',
-    dataIndex: 'category',
-    key: 'category',
+    dataIndex: 'abbr',
+    key: 'abbr',
     width: '120px'
   },
   {
@@ -76,13 +76,6 @@ const columns = [
     key: 'content',
   }
 ]
-
-// const pagination = {
-//   onChange: page => {
-//     console.log(page);
-//   },
-//   pageSize: 10,
-// };
 </script>
 <script>
 export default {
