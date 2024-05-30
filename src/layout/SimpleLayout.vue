@@ -42,6 +42,9 @@ import PageFooter from './components/footer.vue'
     height: 60px;
     width: 100%;
   }
+  .inner-wrapper {
+    min-height: calc(100vh - 164px);
+  }
 }
 .footer-wrapper {
   background: #001529;

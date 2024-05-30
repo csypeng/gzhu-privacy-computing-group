@@ -12,9 +12,9 @@
     </div>
     <div class="project-detail">
       <div class="menu-bar">
-        <a-menu v-model:selectedKeys="currentCategory" mode="horizontal" :items="category" />
+        <a-menu v-model:selectedKeys="currentCategory" mode="horizontal" :items="category" @select="changeCatetory"/>
       </div>
-      <a-list item-layout="vertical" size="large" :pagination="null" :data-source="projectList">
+      <a-list item-layout="vertical" size="large" :pagination="null" :data-source="currentProjectList">
         <template #renderItem="{ item, index }">
           <a-list-item :key="index">
             <template #extra>
@@ -54,27 +54,26 @@ import { useRoute } from 'vue-router'
 
 const route = useRoute()
 const currentCategory = ref(['all'])
-
-const query = route.query?.category || 'all'
-currentCategory.value = [query]
-console.log(query, currentCategory)
-
-const listData = [];
-for (let i = 0; i < 23; i++) {
-  listData.push({
-    href: 'https://www.antdv.com/',
-    title: `ant design vue part ${i}`,
-    avatar: 'https://joeschmoe.io/api/v1/random',
-    description:
-      'Ant Design, a design language for background applications, is refined by Ant UED Team.',
-    content:
-      'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
-  });
-}
-
+const currentProjectList = ref(projectList)
 const category = [
   {key: 'all', label: 'All', title: 'All'},
 ]
+
+const changeCatetory = ({selectedKeys}) => {
+  const key = selectedKeys[0]
+  let res = []
+  if (key === 'all') {
+    res = projectList
+  } else {
+    res = projectList.filter(elem => elem.category === key)
+  }
+  currentProjectList.value = res
+}
+
+const query = route.query?.category || 'all'
+currentCategory.value = [query]
+changeCatetory({selectedKeys: currentCategory.value})
+
 Object.keys(projectCategory).forEach(elem => {
   category.push({
     key: elem,
@@ -82,7 +81,7 @@ Object.keys(projectCategory).forEach(elem => {
     title: projectCategory[elem]
   })
 })
-console.log(category)
+
 </script>
 
 <script>

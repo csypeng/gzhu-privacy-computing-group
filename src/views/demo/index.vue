@@ -97,6 +97,7 @@ export default {
       .title {
         max-width: 1200px;
         width: 100%;
+        padding: 0 20px;
         .desc {
           max-width: 280px;
           color: rgba(255,255,255, 0.5);

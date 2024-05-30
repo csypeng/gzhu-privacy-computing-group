@@ -12,12 +12,12 @@
     </div>
     <div class="publication-detail">
       <div class="menu-bar">
-        <a-menu v-model:selectedKeys="currentYear" mode="horizontal" :items="years" />
+        <a-menu v-model:selectedKeys="currentYear" mode="horizontal" :items="years" @select="changeYear"/>
       </div>
 
       <div class="publication-list">
         <a-table
-          :dataSource="publications"
+          :dataSource="currentPublications"
           :columns="columns"
           :showHeader="false"
           :pagination="false"
@@ -25,7 +25,7 @@
         >
           <template #bodyCell="{ column, record }">
             <template v-if="column.key === 'abbr'">
-              <a-tag :color="CATEGORY[record.abbr]">{{record.abbr}}</a-tag>
+              <a-tag :color="ABBR[record.abbr]">{{record.abbr}}</a-tag>
             </template>
             <template v-else-if="column.key === 'year'">
               <div class="year-col">{{record.year}}</div>
@@ -52,7 +52,7 @@
 <script setup>
 import { StarOutlined, LikeOutlined, MessageOutlined, RightOutlined } from '@ant-design/icons-vue'
 import { ref } from 'vue'
-import { pageBanner, publications, CATEGORY } from './data.js'
+import { pageBanner, publications, ABBR } from './data.js'
 
 const columns = [
   {
@@ -72,23 +72,34 @@ const columns = [
     width: '120px'
   }
 ]
-
-const pagination = {
-  onChange: page => {
-    console.log(page);
-  },
-  pageSize: 10,
-};
-
+const currentPublications = ref(publications)
 const years = [{key: 'all', label: 'All', title: 'All'}]
 const currentYear = ref(['all']);
+const _years = []
 
-for (let i = 0; i < 6; i++) {
+publications.forEach((elem) => {
+  if (!_years.includes(elem.year)) {
+    _years.push(elem.year)
+  } 
+})
+_years.forEach((year) => {
   years.push({
-    key: `year-${2024-i}`,
-    label: `${2024 - i}`,
-    title: `${2024 - i}`,
+    key: year,
+    label: year,
+    title: year
   })
+})
+
+const changeYear = ({selectedKeys}) => {
+  console.log(selectedKeys)
+  const key = selectedKeys[0]
+  let res = []
+  if(key === 'all') {
+    res = publications
+  } else {
+    res = publications.filter(elem => elem.year === key)
+  }
+  currentPublications.value = res
 }
 
 </script>
