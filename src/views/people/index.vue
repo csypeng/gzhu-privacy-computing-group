@@ -117,12 +117,15 @@ export default {
       width: 100%;
       margin-bottom: 40px;
     }
+    
     .news-card {
       width: 24%;
       margin-top: 16px;
       :deep(.ant-card-cover) {
         width: 100%;
         height: 220px;
+        margin-inline-start: 0;
+        margin-top: 0;
         img {
           width: 100%;
           height: 100%;
@@ -141,8 +144,33 @@ export default {
         text-overflow: ellipsis;
         -o-text-overflow: ellipsis;
       }
-      &:not(:nth-child(4n)) {
-        margin-right: calc(4% / 3)
+      // &:not(:nth-child(4n)) {
+      //   margin-right: calc(4% / 3)
+      // }
+    }
+    
+    @media screen and (max-width: 780px) {
+      .news-card {
+        width: 49%;
+        &:not(:nth-child(2n)) {
+          margin-right: 2%;
+        }
+      }
+    }
+    @media screen and (min-width: 781px) and (max-width: 1023px) {
+      .news-card {
+        width: 32%;
+        &:not(:nth-child(3n)) {
+          margin-right: calc(4% / 2)
+        }
+      }
+    }
+    @media (min-width: 1024px) {
+      .news-card {
+        width: 24%;
+        &:not(:nth-child(4n)) {
+          margin-right: calc(4% / 3)
+        }
       }
     }
   }

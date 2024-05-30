@@ -23,6 +23,7 @@ import PageFooter from './components/footer.vue'
 <style lang="less" scoped>
 .layout-wrapper {
   background: #fff;
+  min-width: 660px;
 }
 .header-wrapper {
   z-index: 99;
@@ -36,7 +37,6 @@ import PageFooter from './components/footer.vue'
 }
 .content-wrapper {
   position: relative;
-  // height: 2000px;
   padding-bottom: 40px;
   .header-ghost {
     height: 60px;
