@@ -84,19 +84,23 @@ export default {
 }
 @media screen and (max-width: 719px) {
   .narrow-mode {
-    display: block;
+    visibility: visible;
     margin-right: 10px;
+    position: relative;
   }
   .normal-mode {
-    display: none;
+    visibility: hidden;
+    position: absolute;
   }
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 720px) and (max-width: 12000px) {
   .narrow-mode {
-    display: none;
+    visibility: hidden;
+    position: absolute;
   }
   .normal-mode {
-    display: block;
+    visibility: visible;
+    position: relative;
   }
 }
 </style>
