@@ -36,8 +36,8 @@
         
       </div>
       <div class="btn-row">
-        <a-button type="primary" ghost="">
-          <router-link :to="{name: 'News'}">了解更多</router-link>
+        <a-button type="primary" ghost="" style="padding: 0">
+          <router-link :to="{name: 'News'}" style="padding: 8px 29px">了解更多</router-link>
         </a-button>
       </div>
     </div>

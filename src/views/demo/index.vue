@@ -11,7 +11,7 @@
       </a-carousel>
     </div>
     <div class="demo-detail">
-      <a-list item-layout="vertical" size="large" :pagination="pagination" :data-source="demoList">
+      <a-list item-layout="vertical" size="large" :pagination="false" :data-source="demoList">
         <template #renderItem="{ item, index }">
           <a-list-item :key="index">
             <template #extra>
@@ -58,12 +58,6 @@ for (let i = 0; i < 23; i++) {
       'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
   });
 }
-const pagination = {
-  onChange: page => {
-    console.log(page);
-  },
-  pageSize: 10,
-};
 const actions = [
   {
     icon: StarOutlined,

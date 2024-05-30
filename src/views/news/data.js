@@ -1,21 +1,16 @@
 // color = { processing, success, error, warning, magenta, red, volcano, orange, gold, lime, green, cyan, blue, geekblue, purple }
+import {TAGS} from '@/utils/tags.js'
 export const pageBanner = {
   title: '动态',
   desc: ''
 }
 
-const TAGS = {
-  html: {
-    name: 'HTML', type: 'processing'
-  },
-  pdf: {
-    name: 'PDF', type: 'success'
-  },
-  url: {
-    name: 'URL', type: 'magenta'
-  }
+export const NewsCategory = {
+  'news': { title: '新闻', color: "orange" },
+  'activity': { title: '活动', color: "cyan" },
+  'project': { title: '项目', color: "purple" },
+  'paper': { title: '文章', color: "magenta" },
 }
-
 
 export const newsList = [
   {
@@ -36,188 +31,84 @@ export const newsList = [
 > > 呜呼！何时眼前突兀见此屋，吾庐独破受冻死亦足！
 
     `,
-    category: ['Paper'],
-    tags: [
-      {
-        ...TAGS.url,
-        url: ''
-      },
-      {
-        ...TAGS.pdf,
-        url: '@/assets/pdf/test.pdf'
-      }
-    ]
+    category: ['paper'],
+    url: ''
   },
   {
     time: 'Jan 1, 2024',
     title: '2 Papers accepted by TIFS',
     content: '',
-    category: ['Paper'],
-    tags: [
-      {
-        ...TAGS.url,
-        url: ''
-      },
-      {
-        ...TAGS.pdf,
-        url: ''
-      }
-    ]
+    category: ['paper'],
+    url: 'https://www.antdv.com/components/tag'
   },
   {
     time: 'Dec 25, 2023',
     title: 'Some activities',
     content: '',
-    category: ['Activicy'],
-    tags: [
-      {
-        ...TAGS.url,
-        url: ''
-      },
-    ]
+    category: ['activity'],
+    url: ''
   },
   {
     time: 'May 19, 2023',
     title: 'Paper accepted by NDSS 2024',
     content: '',
-    category: ['Paper'],
-    tags: [
-      {
-        ...TAGS.url,
-        url: ''
-      },
-      {
-        ...TAGS.pdf,
-        url: ''
-      }
-    ]
+    category: ['paper'],
+    url: 'https://www.antdv.com/components/tag'
   },
   {
     time: 'May 19, 2023',
     title: 'Paper accepted by NDSS 2024',
     content: '',
-    category: ['Paper'],
-    tags: [
-      {
-        ...TAGS.url,
-        url: ''
-      },
-      {
-        ...TAGS.pdf,
-        url: ''
-      }
-    ]
+    category: ['news'],
+    url: 'https://www.antdv.com/components/tag'
   },
   {
     time: 'May 19, 2023',
     title: 'Paper accepted by NDSS 2024',
     content: '',
-    category: ['Paper'],
-    tags: [
-      {
-        ...TAGS.url,
-        url: ''
-      },
-      {
-        ...TAGS.pdf,
-        url: ''
-      }
-    ]
+    category: ['activity'],
+    url: ''
   },
   {
     time: 'May 19, 2023',
     title: 'Paper accepted by NDSS 2024',
     content: '',
-    category: ['Paper'],
-    tags: [
-      {
-        ...TAGS.url,
-        url: ''
-      },
-      {
-        ...TAGS.pdf,
-        url: ''
-      }
-    ]
+    category: ['project'],
+    url: ''
   },
   {
     time: 'May 19, 2023',
     title: 'Paper accepted by NDSS 2024',
     content: '',
-    category: ['Paper'],
-    tags: [
-      {
-        ...TAGS.url,
-        url: ''
-      },
-      {
-        ...TAGS.pdf,
-        url: ''
-      }
-    ]
+    category: ['project'],
+    url: ''
   },
   {
     time: 'May 19, 2023',
     title: 'Paper accepted by NDSS 2024',
     content: '',
-    category: ['Paper'],
-    tags: [
-      {
-        ...TAGS.url,
-        url: ''
-      },
-      {
-        ...TAGS.pdf,
-        url: ''
-      }
-    ]
+    category: ['paper'],
+    url: ''
   },
   {
     time: 'May 19, 2023',
     title: 'Paper accepted by NDSS 2024',
     content: '',
-    category: ['Paper'],
-    tags: [
-      {
-        ...TAGS.url,
-        url: ''
-      },
-      {
-        ...TAGS.pdf,
-        url: ''
-      }
-    ]
+    category: ['paper'],
+    url: ''
   },
   {
     time: 'May 19, 2023',
     title: 'Paper accepted by NDSS 2024',
     content: '',
-    category: ['Paper'],
-    tags: [
-      {
-        ...TAGS.url,
-        url: ''
-      },
-      {
-        ...TAGS.pdf,
-        url: ''
-      }
-    ]
+    category: ['paper'],
+    url: ''
   },
   {
     time: 'May 19, 2023',
     title: 'Paper accepted by NDSS 2024',
     content: '',
-    category: ['Paper'],
-    tags: [
-      {
-        ...TAGS.url,
-        url: ''
-      },
-      {
-        ...TAGS.pdf,
-        url: ''
-      }
-    ]
+    category: ['paper'],
+    url: ''
   },
 ]

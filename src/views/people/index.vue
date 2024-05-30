@@ -122,7 +122,7 @@ export default {
       margin-top: 16px;
       :deep(.ant-card-cover) {
         width: 100%;
-        height: 170px;
+        height: 220px;
         img {
           width: 100%;
           height: 100%;
@@ -136,16 +136,11 @@ export default {
       }
       :deep(.desc) {
         width: 100%;
-        height: 110px;
+        height: 90px;
         overflow: hidden;
-        // white-space: nowrap;
         text-overflow: ellipsis;
         -o-text-overflow: ellipsis;
       }
-      // :deep(.footer) {
-      //   // margin-top: 10px;
-      //   height: 66px;
-      // }
       &:not(:nth-child(4n)) {
         margin-right: calc(4% / 3)
       }
