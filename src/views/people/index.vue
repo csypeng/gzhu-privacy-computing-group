@@ -18,7 +18,7 @@
           <template #cover>
             <img
               alt="example"
-              :src='`/public/staffImages/${staff.imageUrl}`'
+              :src='`/staffImages/${staff.imageUrl}`'
             />
           </template>
           <a-card-meta>
