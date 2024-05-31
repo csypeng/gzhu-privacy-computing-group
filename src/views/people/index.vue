@@ -18,7 +18,7 @@
           <template #cover>
             <img
               alt="example"
-              :src='`/src/public/staffImages/${staff.imageUrl}`'
+              :src='`/public/staffImages/${staff.imageUrl}`'
             />
           </template>
           <a-card-meta>
@@ -54,10 +54,10 @@
 import { staffGroup, pageBanner } from './data.js'
 import { MailOutlined, HomeOutlined, EnvironmentOutlined } from '@ant-design/icons-vue'
 
-// const getImageUrl = (imageUrl) => {
-//   // imageUrl ? `/src/assets/images/${imageUrl}` : '/src/assets/images/empty_avater.png'
-//   import (`./staffImages/${imageUrl}`)
-// }
+const getImageUrl = (imageUrl) => {
+  // imageUrl ? `/src/assets/images/${imageUrl}` : '/src/assets/images/empty_avater.png'
+  import (`./staffImages/${imageUrl}`)
+}
 </script>
 <script>
 export default {
