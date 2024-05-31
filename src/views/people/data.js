@@ -14,7 +14,7 @@ export const staffGroup = [
         email: 'xxx@xxx.edu.hk',
         url: 'https://changyudong.site',
         location: 'some location',
-        imageUrl: ''
+        imageUrl: 'empty_avater.png'
       },
       {
         name: "xxx 教授",
