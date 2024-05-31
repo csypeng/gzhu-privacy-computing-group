@@ -17,7 +17,7 @@
       >
         <template #bodyCell="{ column, record }">
           <template v-if="column.key === 'abbr'">
-            <a-tag :color="CATEGORY[record.abbr]">{{record.abbr}}</a-tag>
+            <a-tag :color="ABBR[record.abbr]">{{record.abbr}}</a-tag>
           </template>
           <template v-else-if="column.key === 'content'">
             <div class="title">{{record.title}}</div>
@@ -38,7 +38,7 @@
   </div>
 </template>
 <script setup>
-import { publications, CATEGORY } from '@/views/publications/data.js'
+import { publications, ABBR } from '@/views/publications/data.js'
 import { projectList } from '@/views/projects/data.js'
 import MarkdownRenderer from '@/components/MarkdownRenderer.vue'
 import { useRoute } from 'vue-router'
