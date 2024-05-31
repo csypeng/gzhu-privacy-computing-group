@@ -16,10 +16,7 @@
       <div class="inner-container">
         <a-card hoverable class="news-card" v-for="staff in group.members">
           <template #cover>
-            <img
-              alt="example"
-              :src='`./${staff.imageUrl}`'
-            />
+            <img :src='`./staffImages/${staff.imageUrl || "empty_avater.png"}`'/>
           </template>
           <a-card-meta>
             <template #title>{{staff.name}}</template>

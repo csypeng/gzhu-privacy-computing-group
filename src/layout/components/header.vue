@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="title">
-      <img src="@/assets/logo2.png" style="height: 32px; margin-top: -8px"/>
+      <img src="@/assets/images/logo.png" style="height: 32px; margin-top: -8px"/>
       <span style="margin-left: 8px; font-size: 18px; font-weight: bold; line-height: 40px;">隐私计算学术组</span>
     </div>
     <div class="normal-mode">

@@ -21,7 +21,7 @@ export const projectList = [
     subtitle: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
     category: 'secure_computing',
     description: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024. In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
-    imageUrl: '/src/assets/images/project-image.png',
+    image: 'project-image.png',
     md: 'test',
     labels: ['label 1', 'label 3']
   },
@@ -32,7 +32,7 @@ export const projectList = [
     subtitle: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
     category: 'ai_security',
     description: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024. In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
-    imageUrl: '/src/assets/images/project-image.png',
+    image: 'project-image.png',
     md: 'test',
     labels: ['label 2']
   },
@@ -43,7 +43,7 @@ export const projectList = [
     subtitle: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
     category: 'ai_security',
     description: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024. In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
-    imageUrl: '/src/assets/images/project-image.png',
+    image: 'project-image.png',
     md: 'test',
     labels: ['label 3']
   },
@@ -54,7 +54,7 @@ export const projectList = [
     subtitle: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
     category: 'differential_privacy',
     description: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024. In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
-    imageUrl: '/src/assets/images/project-image.png',
+    image: 'project-image.png',
     md: 'test',
     labels: ['label 4']
   },
@@ -65,7 +65,7 @@ export const projectList = [
     subtitle: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
     category: 'differential_privacy',
     description: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024. In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
-    imageUrl: '/src/assets/images/project-image.png',
+    image: 'project-image.png',
     md: 'test',
     labels: ['label 5']
   },
@@ -76,7 +76,7 @@ export const projectList = [
     subtitle: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
     category: 'differential_privacy',
     description: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024. In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
-    imageUrl: '/src/assets/images/project-image.png',
+    image: 'project-image.png',
     md: 'test',
     labels: ['label 2']
   },
@@ -87,7 +87,7 @@ export const projectList = [
     subtitle: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
     category: 'differential_privacy',
     description: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024. In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
-    imageUrl: '/src/assets/images/project-image.png',
+    image: 'project-image.png',
     md: 'test',
     labels: ['label 2']
   },

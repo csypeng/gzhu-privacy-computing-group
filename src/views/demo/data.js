@@ -12,7 +12,7 @@ export const demoList = [
     subtitle: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
     category: 'NDSS',
     description: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024. In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
-    imageUrl: '',
+    image: 'project-image.png',
     tags: [
       {
         ...TAGS.pdf,
@@ -30,7 +30,7 @@ export const demoList = [
     subtitle: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
     category: 'NDSS',
     description: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024. In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
-    imageUrl: '',
+    image: 'project-image.png',
     tags: [
       {
         ...TAGS.pdf,
@@ -48,7 +48,7 @@ export const demoList = [
     subtitle: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
     category: 'NDSS',
     description: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024. In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
-    imageUrl: '',
+    image: 'project-image.png',
     tags: [
       {
         ...TAGS.pdf,
@@ -66,7 +66,7 @@ export const demoList = [
     subtitle: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
     category: 'NDSS',
     description: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024. In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
-    imageUrl: '',
+    image: 'project-image.png',
     tags: [
       {
         ...TAGS.pdf,
@@ -84,7 +84,7 @@ export const demoList = [
     subtitle: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
     category: 'NDSS',
     description: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024. In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
-    imageUrl: '',
+    image: 'project-image.png',
     tags: [
       {
         ...TAGS.pdf,
@@ -102,7 +102,7 @@ export const demoList = [
     subtitle: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
     category: 'NDSS',
     description: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024. In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
-    imageUrl: '',
+    image: 'project-image.png',
     tags: [
       {
         ...TAGS.pdf,
@@ -120,7 +120,7 @@ export const demoList = [
     subtitle: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
     category: 'NDSS',
     description: 'In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024. In 31st Annual Network and Distributed System Security Symposium (NDSS 2024), 2024',
-    imageUrl: '',
+    image: 'project-image.png',
     tags: [
       {
         ...TAGS.pdf,

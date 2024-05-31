@@ -55,7 +55,7 @@ currentProject.labels.forEach((label) => {
   relatedPublications = [...relatedPublications, ...res]
 })
 
-import(`./md/${currentProject.md}.md`).then(res => {
+import(`@/assets/markdown/${currentProject.md}.md`).then(res => {
   fetch(res.default)
     .then(response => response.text())
     .then(text => {

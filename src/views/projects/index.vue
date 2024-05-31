@@ -21,7 +21,7 @@
               <a-image
                 :width="250"
                 :height="140"
-                :src="item.imageUrl"
+                :src="`./projectImages/${item.image}`"
               />
             </template>
             <a-list-item-meta :description="item.subtitle">
