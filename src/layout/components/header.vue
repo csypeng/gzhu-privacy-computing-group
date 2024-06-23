@@ -43,8 +43,8 @@ const navTo = ({ key, keyPath, item }) => {
 const NAVIGATION = [
   { key: 'Homepage', title: '首页', label: '首页', icon: () => h(HomeOutlined), router: { name: 'Homepage' } },
   // { key: 'News', title: '动态', label: '动态', icon: () => h(MailOutlined), router: { name: 'News' } },
-  { key: 'People', title: '成员', label: '成员', icon: () => h(UserOutlined), router: { name: 'People' } },
-  { key: 'Projects', title: '项目', label: '项目', icon: () => h(AppstoreOutlined), router: { name: 'Projects' } },
+  { key: 'People', title: '主要成员', label: '主要成员', icon: () => h(UserOutlined), router: { name: 'People' } },
+  { key: 'Projects', title: '科研项目', label: '科研项目', icon: () => h(AppstoreOutlined), router: { name: 'Projects' } },
   { key: 'Publications', title: '研究成果', label: '研究成果', icon: () => h(FlagOutlined), router: { name: ' Publications' } },
   { key: 'Demo', title: '原型系统', label: '原型系统', icon: () => h(ProfileOutlined), router: { name: 'Demo' } },
 ]
