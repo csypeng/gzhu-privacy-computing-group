@@ -2,7 +2,8 @@
   <div class="footer">
     <div class="title">
       <span>广州大学</span>
-      <span>隐私计算组</span>
+      <span>隐私计算组 | </span>
+      <a href="https://beian.miit.gov.cn/" target="_blank" style="color: rgba(255, 255, 255, 0.65)">粤ICP备2024280233号-1</a>
     </div>
     <div class="others">Copyright © 2024. All rights reserved. </div>
   </div>
