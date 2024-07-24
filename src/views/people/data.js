@@ -26,12 +26,12 @@ export const staffGroup = [
         imageUrl: 'avater.png'
       },
       {
-        name: "王绍蔚 副教授",
+        name: "xxx 教授",
         desc: "Head & Chair Professor",
-        content: "博士，副教授，硕士生导师。2019年毕业于中国科学技术大学计算机学院，获“计算机软件与理论”专业博士学位；曾在腾讯担任算法工程师；2020年12月起任职于广州大学人工智能研究院，入选广州大学“百人计划”。主要从事联邦学习、机器学习等领域的教学与科研工作。2015年以来发表论文20余篇，其中CCF推荐A类会议3篇，A类期刊2篇。",
-        email: 'wangsw@gzhu.edu.cn',
-        url: '',
-        location: '广东省广州市',
+        content: "Ohter introduction",
+        email: 'xxx@xxx.edu.hk',
+        url: 'https://changyudong.site',
+        location: 'some location',
         imageUrl: 'avater.png'
       },
     ]
