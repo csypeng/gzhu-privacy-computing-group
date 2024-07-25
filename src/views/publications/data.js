@@ -103,6 +103,78 @@ export const publications = [
     labels: ['label 2', 'label 3']
   },
   {
+    year: '2024',
+    title: 'ChatGraph: Chat with Your Graphs',
+    writer: 'Yun Peng, Sen Lin, Qian Chen, Shaowei Wang, Lyu Xu, Xiaojun Ren, Yafei Li, Jianliang Xu',
+    subtitle: 'IEEE International Conference on Data Engineering(ICDE)，2024',
+    abbr: 'ICDE',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/'
+      },
+      {
+        ...TAGS.html,
+        url: ''
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2024',
+    title: 'Privacy Amplification via Shuffling: Unified, Simplified, and Tightened',
+    writer: 'Shaowei Wang, Yun Peng, Jin Li, Zikai Wen, Zhipeng Li, Shiyu Yu, Di Wang, Wei Yang',
+    subtitle: '.Proceedings of the International Conference on Very Large Data Bases (VLDB), 2024 ',
+    abbr: 'VLDB',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/'
+      },
+      {
+        ...TAGS.html,
+        url: ''
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2024',
+    title: 'Optimal Locally Private Data Stream Analytics',
+    writer: 'Shaowei Wang, Yun Peng, Kongyang Chen, Wei Yang',
+    subtitle: 'IEEE International Conference on Computer Communications(INFOCOM) ,2024',
+    abbr: 'INFOCOM',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/'
+      },
+      {
+        ...TAGS.html,
+        url: ''
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2024',
+    title: '',
+    writer: '',
+    subtitle: '',
+    abbr: 'NDSS',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/'
+      },
+      {
+        ...TAGS.html,
+        url: ''
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
     year: '2023',
     title: 'Hash-Based Direct Anonymous Attestation',
     writer: 'Liqun Chen,  Changyu Dong, Nada El Kassem, Christopher J. P. Newton, and Yalan Wang',
@@ -229,6 +301,96 @@ export const publications = [
     labels: ['label 4']
   },
   {
+    year: '2023',
+    title: 'Efficient Approximate Nearest Neighbor Search in Multi-dimensional Databases',
+    writer: 'Yun Peng, Byron Choi, Tsz Nam Chan, Jianye Yang, Jianliang Xu',
+    subtitle: 'ACM International Conference on Management of Data (SIGMOD), 2023',
+    abbr: 'SIGMOD',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/sigmod23a.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.1145/3588908'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2023',
+    title: 'A Framework for Privacy Preserving Localized Graph Pattern Query Processing',
+    writer: 'Lyu Xu, Byron Choi, Yun Peng, Jianliang Xu, Sourav S. Bhowmick',
+    subtitle: 'ACM International Conference on Management of Data (SIGMOD),  2023',
+    abbr: 'SIGMOD',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/sigmod23b.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://dl.acm.org/doi/abs/10.1145/3589274'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2023',
+    title: '(p,q)-Biclique Counting and Enumeration for Large Sparse Bipartite Graphs',
+    writer: 'Jianye Yang, Yun Peng, Dian Ouyang, Wenjie Zhang, Xuemin Lin, Xiang Zhao',
+    subtitle: 'VLDB Journal (VLDBJ),  2023, ',
+    abbr: 'VLDBJ',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/vldbj23.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.1007/s00778-023-00786-0 '
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2023',
+    title: 'Auction-based Crowdsourced First and Last Mile Logistics',
+    writer: 'Yafei Li, Yifei Li, Yun Peng, Xiaoyi Fu, Jianliang Xu, Mingliang Xu',
+    subtitle: 'IEEE Transactions on Mobile Computing (TMC), 2023',
+    abbr: 'TMC',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/tmc23.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.1109/TMC.2022.3219881'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2023',
+    title: '',
+    writer: '',
+    subtitle: '',
+    abbr: '',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/'
+      },
+      {
+        ...TAGS.html,
+        url: ''
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
     year: '2022',
     title: 'Understanding adaptive gradient clipping in DP-SGD, empirically',
     writer: 'Guanbiao Lin, Hongyang Yan, Guang Kou, Teng Huang, Shiyu Peng, Yingying Zhang, and Changyu Dong',
@@ -241,7 +403,7 @@ export const publications = [
       },
       {
         ...TAGS.html,
-        url: ''
+        url: 'https://doi.org/10.1002/int.23001'
       }
     ],
     labels: ['label 4']
@@ -255,11 +417,11 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/ESORICS22'
+        url: '@/assets/pdf/ESORICS22.pdf'
       },
       {
         ...TAGS.html,
-        url: ''
+        url: 'https://link.springer.com/chapter/10.1007/978-3-031-17140-6_28'
       }
     ],
     labels: ['label 4']
@@ -273,7 +435,7 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/SOUPS22'
+        url: '@/assets/pdf/SOUPS22.pdf'
       },
       {
         ...TAGS.html,
@@ -291,7 +453,7 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/TDSC22'
+        url: '@/assets/pdf/TDSC22.pdf'
       },
       {
         ...TAGS.html,
@@ -304,12 +466,12 @@ export const publications = [
     year: '2022',
     title: 'Differentially Private Byzantine-robust Federated Learning',
     writer: 'Xu Ma, Xiaoqian Sun, Yuduo Wu, Zheli Liu, Xiaofeng Chen, and Changyu Dong',
-    subtitle: 'Xu Ma, Xiaoqian Sun, Yuduo Wu, Zheli Liu, Xiaofeng Chen, and Changyu Dong',
+    subtitle: 'IEEE Trans. Parallel Distributed Syst., 2022',
     abbr: 'TPDS',
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/TPDS22'
+        url: '@/assets/pdf/TPDS22.pdf'
       },
       {
         ...TAGS.html,
@@ -327,14 +489,69 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: ''
+        url: '@/assets/pdf/fc22.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://link.springer.com/chapter/10.1007/978-3-031-18283-9_6'
+      }
+    ],
+    labels: ['label 4']
+  },
+  {
+    year: '2022',
+    title: 'LAN: Learning-based Approximate k-Nearest Neighbor Search in Graph Databases',
+    writer: 'Yun Peng, Byron Choi, Tsz Nam Chan, Jianliang Xu',
+    subtitle: 'Proceedings of the IEEE International Conference on Data Engineering (ICDE), 2022',
+    abbr: 'ICDE',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/icde22.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.1109/ICDE53745.2022.00233'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2022',
+    title: '(p,q)-Biclique Counting and Enumeration for Large Sparse Bipartite Graphs',
+    writer: 'Jianye Yang, Yun Peng, Wenjie Zhang',
+    subtitle: 'Proceedings of the International Conference on Very Large Data Bases (VLDB), 2022',
+    abbr: 'VLDB',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/vldb22.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.14778/3489496.3489497'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  
+  {
+    year: '2022',
+    title: '',
+    writer: '',
+    subtitle: '',
+    abbr: 'NDSS',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/'
       },
       {
         ...TAGS.html,
         url: ''
       }
     ],
-    labels: ['label 4']
+    labels: ['label 1', 'label 2']
   },
   {
     year: '2021',
@@ -345,7 +562,7 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/'
+        url: '@/assets/pdf/scichina21.pdf'
       },
       {
         ...TAGS.html,
@@ -363,7 +580,7 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/'
+        url: '@/assets/pdf/icdm21.pdf'
       },
       {
         ...TAGS.html,
@@ -381,7 +598,7 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/USENIX_21_FULL'
+        url: '@/assets/pdf/USENIX_21_FULL.pdf'
       },
       {
         ...TAGS.html,
@@ -399,7 +616,7 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/TIFS_20'
+        url: '@/assets/pdf/TIFS_20.pdf'
       },
       {
         ...TAGS.html,
@@ -417,7 +634,7 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/TDSC_19'
+        url: '@/assets/pdf/TDSC_19.pdf'
       },
       {
         ...TAGS.html,
@@ -435,7 +652,7 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/TSC_2018'
+        url: '@/assets/pdf/TSC_2018.pdf'
       },
       {
         ...TAGS.html,
@@ -444,4 +661,41 @@ export const publications = [
     ],
     labels: ['label 4']
   },
+  {
+    year: '2021',
+    title: 'Graph Edit Distance Learning via Modeling Optimum Matchings with Constraints',
+    writer: 'Yun Peng, Byron Choi, Jianliang Xu',
+    subtitle: 'Proceedings of the International Joint Conferences on Artificial Intelligence (IJCAI), 2021',
+    abbr: 'IJCAI',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/ijcai21.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.24963/ijcai.2021/212'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2021',
+    title: '',
+    writer: '',
+    subtitle: '',
+    abbr: 'NDSS',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/'
+      },
+      {
+        ...TAGS.html,
+        url: ''
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+
 ]
