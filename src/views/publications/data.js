@@ -103,6 +103,169 @@ export const publications = [
     labels: ['label 2', 'label 3']
   },
   {
+    year: '2024',
+    title: 'ChatGraph: Chat with Your Graphs',
+    writer: 'Yun Peng, Sen Lin, Qian Chen, Shaowei Wang, Lyu Xu, Xiaojun Ren, Yafei Li, Jianliang Xu',
+    subtitle: 'IEEE International Conference on Data Engineering(ICDE)，2024',
+    abbr: 'ICDE',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/'
+      },
+      {
+        ...TAGS.html,
+        url: ''
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2024',
+    title: 'Privacy Amplification via Shuffling: Unified, Simplified, and Tightened',
+    writer: 'Shaowei Wang, Yun Peng, Jin Li, Zikai Wen, Zhipeng Li, Shiyu Yu, Di Wang, Wei Yang',
+    subtitle: '.Proceedings of the International Conference on Very Large Data Bases (VLDB), 2024 ',
+    abbr: 'VLDB',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/'
+      },
+      {
+        ...TAGS.html,
+        url: ''
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2024',
+    title: 'Optimal Locally Private Data Stream Analytics',
+    writer: 'Shaowei Wang, Yun Peng, Kongyang Chen, Wei Yang',
+    subtitle: 'IEEE International Conference on Computer Communications(INFOCOM) ,2024',
+    abbr: 'INFOCOM',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/'
+      },
+      {
+        ...TAGS.html,
+        url: ''
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2024',
+    title: 'Differentially Private Numerical Vector Analyses in the Local and Shuffle Model',
+    writer: 'Shaowei Wang, Jin Li, Yuntong Li, Jin Li, Wei Yang, Hongyang Yan',
+    subtitle: 'IEEE Transactions on Dependable and Secure Computing (TDSC). IEEE, 2024',
+    abbr: 'TDSC',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/'
+      },
+      {
+        ...TAGS.html,
+        url: ''
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2024',
+    title: 'Security and Privacy Issues in Deep Reinforcement Learning: Threats and Countermeasures',
+    writer: 'Kanghua Mo, Peigen Ye, Xiaojun Ren, Shaowei Wang, Wenjun Li, Jin Li',
+    subtitle: 'ACM Computing Surveys. ACM, 2024',
+    abbr: 'CSUR',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/csur24b.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.1145/3640312'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2024',
+    title: 'GenSeg: On Generating Unified Adversary for Segmentation',
+    writer: 'Yuxuan Zhang, Zhenbo Shi, Wei Yang, Shuchang Wang, Shaowei Wang, Yinxing Xue',
+    subtitle: 'The 33rd International Joint Conference on Artificial Intelligence (IJCAI). 2024',
+    abbr: 'IJCAI',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/'
+      },
+      {
+        ...TAGS.html,
+        url: ''
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2024',
+    title: 'ARES: On Adversarial Robustness Enhancement for Image Steganographic Cost Learning',
+    writer: 'Qi Cui, Zhili Zhou, Ruohan Meng, Shaowei Wang, Hongyang Yan, Q. M. Jonathan Wu',
+    subtitle: 'IEEE Transactions on Multimedia (TMM). IEEE, 2024',
+    abbr: 'TMM',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/tmm24.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.1109/TMM.2024.3353543'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2024',
+    title: 'DPGazeSynth: Enhancing Eye-tracking Virtual Reality Privacy with Differentially Private Data Synthesis',
+    writer: 'Xiaojun Ren, Jiluan Fan, Ning Xu, Shaowei Wang, Changyu Dong, Zikai Wen',
+    subtitle: 'Information Sciences, 2024',
+    abbr: 'IS',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/is24.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.1016/j.ins.2024.120720'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2024',
+    title: '',
+    writer: '',
+    subtitle: '',
+    abbr: 'NDSS',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/'
+      },
+      {
+        ...TAGS.html,
+        url: ''
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+
+  {
     year: '2023',
     title: 'Hash-Based Direct Anonymous Attestation',
     writer: 'Liqun Chen,  Changyu Dong, Nada El Kassem, Christopher J. P. Newton, and Yalan Wang',
@@ -229,6 +392,169 @@ export const publications = [
     labels: ['label 4']
   },
   {
+    year: '2023',
+    title: 'Efficient Approximate Nearest Neighbor Search in Multi-dimensional Databases',
+    writer: 'Yun Peng, Byron Choi, Tsz Nam Chan, Jianye Yang, Jianliang Xu',
+    subtitle: 'ACM International Conference on Management of Data (SIGMOD), 2023',
+    abbr: 'SIGMOD',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/sigmod23a.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.1145/3588908'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2023',
+    title: 'A Framework for Privacy Preserving Localized Graph Pattern Query Processing',
+    writer: 'Lyu Xu, Byron Choi, Yun Peng, Jianliang Xu, Sourav S. Bhowmick',
+    subtitle: 'ACM International Conference on Management of Data (SIGMOD),  2023',
+    abbr: 'SIGMOD',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/sigmod23b.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://dl.acm.org/doi/abs/10.1145/3589274'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2023',
+    title: '(p,q)-Biclique Counting and Enumeration for Large Sparse Bipartite Graphs',
+    writer: 'Jianye Yang, Yun Peng, Dian Ouyang, Wenjie Zhang, Xuemin Lin, Xiang Zhao',
+    subtitle: 'VLDB Journal (VLDBJ),  2023, ',
+    abbr: 'VLDBJ',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/vldbj23.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.1007/s00778-023-00786-0 '
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2023',
+    title: 'Auction-based Crowdsourced First and Last Mile Logistics',
+    writer: 'Yafei Li, Yifei Li, Yun Peng, Xiaoyi Fu, Jianliang Xu, Mingliang Xu',
+    subtitle: 'IEEE Transactions on Mobile Computing (TMC), 2023',
+    abbr: 'TMC',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/tmc23.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.1109/TMC.2022.3219881'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2023',
+    title: 'Locally Private Set-valued Data Analyses: Distribution and Heavy Hitters Estimation',
+    writer: 'Shaowei Wang, Yuntong Li, Yusen Zhong, Kongyang Chen, Xianmin Wang, Zhili Zhou, Fei Peng, Yuqiu Qian, Jiachun Du, Wei Yang',
+    subtitle: 'IEEE Transactions on Mobile Computing (TMC). IEEE, 2023',
+    abbr: 'TMC',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/tmc23b.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.1109/TMC.2023.3342056'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2023',
+    title: 'Shuffle Differential Private Data Aggregation for Random Population',
+    writer: 'Shaowei Wang, Xuandi Luo, Yuqiu Qian, Youwen Zhu, Kongyang Chen, Qi Chen, Bangzhou Xin, Wei Yang',
+    subtitle: 'IEEE Transactions on Parallel and Distributed Systems (TPDS). IEEE, 2023',
+    abbr: 'TPDS',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/tpds23.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.1109/TPDS.2023.3247541'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2023',
+    title: 'Fine-grained Private Knowledge Distillation',
+    writer: 'Yuntong Li, Shaowei Wang, Yingying Wang, Jin Li, Yuqiu Qian, Bangzhou Xin, Wei Yang',
+    subtitle: '2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP).IEEE 2023',
+    abbr: 'ICASSP',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/icassp23.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.1109/ICASSP49357.2023.10094822'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2023',
+    title: 'FirewaLLM: A Portable Data Protection and Recovery Framework for LLM Services',
+    writer: 'Bin Huang, Shiyu Yu, Jin Li, Yuyang Chen, Shaozheng Huang, Sufen Zeng, Shaowei Wang',
+    subtitle: 'International Conference on Data Mining and Big Data. Singapore: Springer Nature Singapore, 2023',
+    abbr: 'DMBD',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/dmdb23.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.1007/978-981-97-0844-4_2'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2023',
+    title: '',
+    writer: '',
+    subtitle: '',
+    abbr: '',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/'
+      },
+      {
+        ...TAGS.html,
+        url: ''
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+
+  {
     year: '2022',
     title: 'Understanding adaptive gradient clipping in DP-SGD, empirically',
     writer: 'Guanbiao Lin, Hongyang Yan, Guang Kou, Teng Huang, Shiyu Peng, Yingying Zhang, and Changyu Dong',
@@ -241,7 +567,7 @@ export const publications = [
       },
       {
         ...TAGS.html,
-        url: ''
+        url: 'https://doi.org/10.1002/int.23001'
       }
     ],
     labels: ['label 4']
@@ -255,11 +581,11 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/ESORICS22'
+        url: '@/assets/pdf/ESORICS22.pdf'
       },
       {
         ...TAGS.html,
-        url: ''
+        url: 'https://link.springer.com/chapter/10.1007/978-3-031-17140-6_28'
       }
     ],
     labels: ['label 4']
@@ -273,7 +599,7 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/SOUPS22'
+        url: '@/assets/pdf/SOUPS22.pdf'
       },
       {
         ...TAGS.html,
@@ -291,7 +617,7 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/TDSC22'
+        url: '@/assets/pdf/TDSC22.pdf'
       },
       {
         ...TAGS.html,
@@ -304,12 +630,12 @@ export const publications = [
     year: '2022',
     title: 'Differentially Private Byzantine-robust Federated Learning',
     writer: 'Xu Ma, Xiaoqian Sun, Yuduo Wu, Zheli Liu, Xiaofeng Chen, and Changyu Dong',
-    subtitle: 'Xu Ma, Xiaoqian Sun, Yuduo Wu, Zheli Liu, Xiaofeng Chen, and Changyu Dong',
+    subtitle: 'IEEE Trans. Parallel Distributed Syst., 2022',
     abbr: 'TPDS',
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/TPDS22'
+        url: '@/assets/pdf/TPDS22.pdf'
       },
       {
         ...TAGS.html,
@@ -327,15 +653,125 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: ''
+        url: '@/assets/pdf/fc22.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://link.springer.com/chapter/10.1007/978-3-031-18283-9_6'
+      }
+    ],
+    labels: ['label 4']
+  },
+  {
+    year: '2022',
+    title: 'LAN: Learning-based Approximate k-Nearest Neighbor Search in Graph Databases',
+    writer: 'Yun Peng, Byron Choi, Tsz Nam Chan, Jianliang Xu',
+    subtitle: 'Proceedings of the IEEE International Conference on Data Engineering (ICDE), 2022',
+    abbr: 'ICDE',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/icde22.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.1109/ICDE53745.2022.00233'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2022',
+    title: '(p,q)-Biclique Counting and Enumeration for Large Sparse Bipartite Graphs',
+    writer: 'Jianye Yang, Yun Peng, Wenjie Zhang',
+    subtitle: 'Proceedings of the International Conference on Very Large Data Bases (VLDB), 2022',
+    abbr: 'VLDB',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/vldb22.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.14778/3489496.3489497'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  
+  {
+    year: '2022',
+    title: 'Federated synthetic data generation with differential privacy',
+    writer: 'Bangzhou Xin, Yangyang Geng, Teng Hu, Sheng Chen, Wei Yang, Shaowei Wang, Liusheng Huang',
+    subtitle: 'Neurocomputing, 2022',
+    abbr: 'IJON',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/ijon22.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.1016/j.neucom.2021.10.027'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2022',
+    title: 'DPCL: Contrastive representation learning with differential privacy',
+    writer: 'Wenjun Li, Anli Yan, Di Wu, Taoyu Zhu, Teng Huang, Xuandi Luo, Shaowei Wang',
+    subtitle: 'International Journal of Intelligent Systems, 2022',
+    abbr: 'IJIS',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/ijis22.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.1002/int.23002'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2022',
+    title: 'Analyzing Preference Data with Local Privacy: Optimal Utility and Enhanced Robustness',
+    writer: 'Shaowei Wang, Xuandi Luo, Yuqiu Qian, Jiachun Du, Wenqing Lin, Wei Yang',
+    subtitle: 'IEEE Transactions on Knowledge and Data Engineering (TKDE). IEEE, 2022',
+    abbr: 'TKDE',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/tkde22.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.1109/TKDE.2022.3207486'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2022',
+    title: '',
+    writer: '',
+    subtitle: '',
+    abbr: 'NDSS',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/'
       },
       {
         ...TAGS.html,
         url: ''
       }
     ],
-    labels: ['label 4']
+    labels: ['label 1', 'label 2']
   },
+
   {
     year: '2021',
     title: 'Cetus: an efficient symmetric searchable encryption against file-injection attack with SGX',
@@ -345,7 +781,7 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/'
+        url: '@/assets/pdf/scichina21.pdf'
       },
       {
         ...TAGS.html,
@@ -363,7 +799,7 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/'
+        url: '@/assets/pdf/icdm21.pdf'
       },
       {
         ...TAGS.html,
@@ -381,7 +817,7 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/USENIX_21_FULL'
+        url: '@/assets/pdf/USENIX_21_FULL.pdf'
       },
       {
         ...TAGS.html,
@@ -399,7 +835,7 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/TIFS_20'
+        url: '@/assets/pdf/TIFS_20.pdf'
       },
       {
         ...TAGS.html,
@@ -417,7 +853,7 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/TDSC_19'
+        url: '@/assets/pdf/TDSC_19.pdf'
       },
       {
         ...TAGS.html,
@@ -435,7 +871,7 @@ export const publications = [
     tags: [
       {
         ...TAGS.pdf,
-        url: '@/assets/pdf/TSC_2018'
+        url: '@/assets/pdf/TSC_2018.pdf'
       },
       {
         ...TAGS.html,
@@ -444,4 +880,59 @@ export const publications = [
     ],
     labels: ['label 4']
   },
+  {
+    year: '2021',
+    title: 'Graph Edit Distance Learning via Modeling Optimum Matchings with Constraints',
+    writer: 'Yun Peng, Byron Choi, Jianliang Xu',
+    subtitle: 'Proceedings of the International Joint Conferences on Artificial Intelligence (IJCAI), 2021',
+    abbr: 'IJCAI',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/ijcai21.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.24963/ijcai.2021/212'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2021',
+    title: 'Hiding Numerical Vectors in Local Private and Shuffled Messages',
+    writer: 'Shaowei Wang, Jin Li, Yuqiu Qian, Jiachun Du, Wenqing Lin, Wei Yang',
+    subtitle: 'The 30th International Joint Conference on Artificial Intelligence (IJCAI). 2021',
+    abbr: 'IJCAI',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/ijcai21b.pdf'
+      },
+      {
+        ...TAGS.html,
+        url: 'https://doi.org/10.24963/ijcai.2021/510'
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+  {
+    year: '2021',
+    title: '',
+    writer: '',
+    subtitle: '',
+    abbr: 'NDSS',
+    tags: [
+      {
+        ...TAGS.pdf,
+        url: '@/assets/pdf/'
+      },
+      {
+        ...TAGS.html,
+        url: ''
+      }
+    ],
+    labels: ['label 1', 'label 2']
+  },
+
 ]
